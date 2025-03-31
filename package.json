@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "behindy": "next build && powershell -Command \"Copy-Item -Path ./build/* -Destination ../behindy2-artifact/ -Recurse -Force\"",
+    "behindy": "next build && xcopy .\\build\\* ..\\behindy2-artifact\\artifact\\ /E /I /Y",
     "start": "next start",
     "lint": "next lint"
   },
